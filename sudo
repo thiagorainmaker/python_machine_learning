@@ -1,0 +1,5 @@
+Requirement already satisfied: pandas in /home/thiagosousa/.local/lib/python2.7/site-packages (0.19.2)
+Requirement already satisfied: numpy>=1.7.0 in /home/thiagosousa/.local/lib/python2.7/site-packages (from pandas) (1.14.0)
+Requirement already satisfied: python-dateutil in /home/thiagosousa/.local/lib/python2.7/site-packages (from pandas) (2.6.1)
+Requirement already satisfied: pytz>=2011k in /home/thiagosousa/.local/lib/python2.7/site-packages (from pandas) (2018.4)
+Requirement already satisfied: six>=1.5 in /home/thiagosousa/.local/lib/python2.7/site-packages (from python-dateutil->pandas) (1.11.0)
