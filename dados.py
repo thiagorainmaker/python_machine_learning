@@ -29,8 +29,9 @@ def carregar_buscas(porcentagem_teste):
     tamanho_treino  = porcentagem_teste*len(y_dummies)
     tamanho_teste   = len(y) - tamanho_treino
 
-    treina_dados     = x_dummies[:int(tamanho_teste)]
-    treina_marcacoes = y_dummies[:int(tamanho_teste)]
+    treina_dados     = x_dummies[:int(tamanho_treino)]
+    treina_marcacoes = y_dummies[:int(tamanho_treino)]
+
 
 
     teste_dados     = x_dummies[-int(tamanho_teste):]
