@@ -1,5 +1,6 @@
 from dados import carregar_buscas
 from sklearn.naive_bayes import MultinomialNB
+from collections import Counter
 
 dados_treino, marcacao_treino, teste_dados, teste_marcacoes = carregar_buscas(0.9)
 
@@ -20,10 +21,11 @@ print("percentual de acerto no algoritmo %d" % taxa_de_acerto)
 
 #testar a eficiencia de um algoritmo que chuta tudo 0 ou tudo 1
 
-acerto_de_um    = sum(marcacao_treino)+sum(teste_marcacoes)
-acerto_de_zero  = sum(marcacao_treino)+sum(teste_marcacoes) - acerto_de_um
 
-taxa_de_acerto_base = 100*max(acerto_de_um, acerto_de_zero)/(len(marcacao_treino)+len(teste_marcacoes))
+acerto_de_um    = sum(marcacao_treino)
+acerto_de_zero  = sum(marcacao_treino) - acerto_de_um
+
+taxa_de_acerto_base = 100*max(acerto_de_um, acerto_de_zero)/(len(marcacao_treino))
 
 print("percentual base de acerto base: %f " % taxa_de_acerto_base)
 
