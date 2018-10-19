@@ -4,6 +4,7 @@ from sklearn.naive_bayes import MultinomialNB
 dados_treino, marcacao_treino, teste_dados, teste_marcacoes = carregar_buscas(0.9)
 
 
+
 model = MultinomialNB()
 model.fit(dados_treino, marcacao_treino)
 resultado = model.predict(teste_dados)
